@@ -4,6 +4,7 @@
     --clr-primary-400: hsl(193, 38%, 86%);
 
     --clr-accent-400: hsl(150, 100%, 66%);
+    --clr-accent-300: hsl(150, 100%, 70%);
 
     --clr-neutral-700: hsl(217, 19%, 38%);
     --clr-neutral-800: hsl(217, 19%, 24%);
@@ -69,8 +70,8 @@ hr {
 /* container */
 
 .container { 
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 80%;
     background-color: var(--clr-neutral-800);
     position: fixed;
     top: 50%;
@@ -79,7 +80,57 @@ hr {
     border-radius: 5%;
 }
 
+@media (min-width: 376px) {
+    .container {
+        width: 50%;
+        height: 50%;
+    }
+}
+
 /* button */
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    height: 100%;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+
+    min-height: 48px;
+    min-width: 48px;
+
+    position: absolute;
+    bottom: var(--size-100);
+
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--clr-accent-400);
+}
+
+@media (min-width: 376px) {
+    .button {
+        min-height: 60px;
+        min-width: 60px;
+
+        bottom: var(--size-100);
+
+    }
+}
+
+.button:hover,
+.button:focus-visible {
+    cursor: pointer;
+    background-color: var(--clr-accent-300);
+    box-shadow: 0em 0em 1em 0em var(--clr-accent-400);
+}
+
 
 /* advice */
 
