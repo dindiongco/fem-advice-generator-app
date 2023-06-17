@@ -14,9 +14,10 @@ function App() {
   return (
     <div className="container">
       <div className="advice-wrapper">
-        {id == '' ? <p className="advice-number"></p>: <p className="advice-number">ADVICE #{id}</p>}
+        {id == '' ? <p className="advice-number">ADVICE</p>: <p className="advice-number">ADVICE #{id}</p>}
         {advice == '' ? <p className="advice-text">Generate a quote!</p>: <p className="advice-text">{advice}</p>}
       </div>
+      <div className="divider"></div>
       <AdviceGenerator generate={getAdvice}></AdviceGenerator>
     </div>
   )
